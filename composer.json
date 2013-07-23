@@ -16,6 +16,5 @@
     ],
     "autoload": {
         "psr-0": {"Betacie\\MangoPay\\": ""}
-    },
-    "target-dir": "Betacie/MangoPay"
+    }
 }
