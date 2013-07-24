@@ -2,6 +2,7 @@
 
 namespace Betacie\MangoPay\Message;
 
+use Betacie\MangoPay\Model\User;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
@@ -13,9 +14,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class UserRequest extends BaseRequest
 {
-
-    const NATURAL_PERSON = 'NATURAL_PERSON';
-    const LEGAL_PERSONALITY = 'LEGAL_PERSONALITY';
 
     /**
      * Create an user
@@ -35,7 +33,7 @@ class UserRequest extends BaseRequest
                 'Tag', 'CanRegisterMeanOfPayment',
             ))
             ->setAllowedValues(array(
-                'PersonType' => array(self::LEGAL_PERSONALITY, self::NATURAL_PERSON),
+                'PersonType' => array(User::LEGAL_PERSONALITY, User::NATURAL_PERSON),
             ))
         ;
 

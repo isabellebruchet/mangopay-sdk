@@ -3,8 +3,7 @@
     "description": "MangoPay PHP SDK",
     "require": {
         "guzzle/http": "3.7.*",
-        "symfony/options-resolver": "~2.3",
-        "symfony/serializer": "~2.3"
+        "symfony/options-resolver": "~2.3"
     },
     "require-dev": {
         "guzzle/plugin-mock": "3.7.*"
