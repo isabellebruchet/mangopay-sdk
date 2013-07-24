@@ -2,8 +2,9 @@
     "name": "betacie/mangopay-sdk",
     "description": "MangoPay PHP SDK",
     "require": {
-        "symfony/options-resolver": "2.3.*",
-        "guzzle/http": "3.7.*"
+        "guzzle/http": "3.7.*",
+        "symfony/options-resolver": "~2.3",
+        "symfony/serializer": "~2.3"
     },
     "require-dev": {
         "guzzle/plugin-mock": "3.7.*"
@@ -16,5 +17,6 @@
     ],
     "autoload": {
         "psr-0": {"Betacie\\MangoPay\\": ""}
-    }
+    },
+    "target-dir": "Betacie/MangoPay"
 }

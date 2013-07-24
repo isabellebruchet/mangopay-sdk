@@ -12,7 +12,7 @@
          bootstrap="./vendor/autoload.php">
     <testsuites>
         <testsuite name="MangoPay SDK Test Suite">
-            <directory>./Betacie/MangoPay/Tests</directory>
+            <directory>./Tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
