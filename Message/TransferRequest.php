@@ -29,10 +29,6 @@ class TransferRequest extends BaseRequest
                 'ClientFeeAmount',
                 'PayerWalletID', 'BeneficiaryWalletID',
             ))
-            ->setAllowedTypes(array(
-                'Amount' => 'integer',
-                'ClientFeeAmount' => 'integer',
-            ))
         ;
 
         $parameters = $resolver->resolve($parameters);

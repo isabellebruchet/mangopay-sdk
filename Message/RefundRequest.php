@@ -21,10 +21,8 @@ class RefundRequest extends BaseRequest
     {
         $resolver = new OptionsResolver();
         $resolver
-            ->setRequired(array(
-                'ContributionID', 'UserID',
-            ))
             ->setOptional(array(
+                'ContributionID', 'UserID',
                 'Tag',
             ))
         ;

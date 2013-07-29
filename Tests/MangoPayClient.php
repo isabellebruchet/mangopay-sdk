@@ -23,21 +23,21 @@ class MangoPayClient extends BaseClient
             }
         }
     }
-    
+
     public static function make($responseNumber = 1)
     {
         if ($responseNumber < 1) {
             throw new \InvalidArgumentException(sprintf('You must pass a number greater than 0: "%s" given', $responseNumber));
         }
-        
+
         $responses = array();
-        
+
         while ($responseNumber > 0) {
             $responses[] = new Response(200);
-            
+
             $responseNumber--;
         }
-        
+
         return new static($responses);
     }
 

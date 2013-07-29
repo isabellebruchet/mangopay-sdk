@@ -20,11 +20,9 @@ class PaymentCardRequest extends BaseRequest
     {
         $resolver = new OptionsResolver();
         $resolver
-            ->setRequired(array(
-                'OwnerID', 'ReturnURL',
-            ))
             ->setOptional(array(
                 'Tag', 'TemplateURL',
+                'OwnerID', 'ReturnURL',
             ))
         ;
 

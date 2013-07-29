@@ -32,20 +32,14 @@ class RecurrentContributionRequest extends BaseRequest
     {
         $resolver = new OptionsResolver();
         $resolver
-            ->setRequired(array(
+            ->setOptional(array(
                 'UserID', 'WalletID',
                 'Amount', 'ReturnURL',
                 'StartDate', 'FrequencyCode', 'NumberOfExecutions',
-            ))
-            ->setOptional(array(
                 'Tag', 'TemplateURL', 'ClientFeeAmount',
             ))
             ->setAllowedValues(array(
                 'FrequencyCode' => self::getFrequencyCodes(),
-            ))
-            ->setAllowedTypes(array(
-                'Amount' => 'integer',
-                'ClientFeeAmount' => 'integer',
             ))
         ;
 

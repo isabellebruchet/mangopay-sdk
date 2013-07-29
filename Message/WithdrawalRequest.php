@@ -22,15 +22,9 @@ class WithdrawalRequest extends BaseRequest
         $resolver = new OptionsResolver();
         $resolver
             ->setOptional(array(
-                'UserID', 'WalletID', 'BenefeciaryID',
+                'UserID', 'WalletID', 'BeneficiaryID',
                 'Amount',
-            ))
-            ->setOptional(array(
                 'ClientFeeAmount', 'Tag',
-            ))
-            ->setAllowedTypes(array(
-                'Amount' => 'integer',
-                'ClientFeeAmount' => 'integer',
             ))
         ;
 
