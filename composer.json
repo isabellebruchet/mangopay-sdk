@@ -1,6 +1,7 @@
 {
     "name": "betacie/mangopay-sdk",
     "description": "MangoPay PHP SDK",
+    "license": "MIT",
     "require": {
         "guzzle/http": "3.7.*",
         "symfony/options-resolver": "~2.3"
