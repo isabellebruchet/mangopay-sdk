@@ -21,12 +21,10 @@ class WalletRequest extends BaseRequest
     {
         $resolver = new OptionsResolver();
         $resolver
-            ->setRequired(array(
-                'Owners',
-            ))
             ->setOptional(array(
+                'Owners',
                 'Tag', 'Name', 'Description',
-                'RaisongGoalAmount', 'ContributionLimitDate',
+                'RaisingGoalAmount', 'ContributionLimitDate',
             ))
             ->setAllowedTypes(array(
                 'Owners' => 'array',
