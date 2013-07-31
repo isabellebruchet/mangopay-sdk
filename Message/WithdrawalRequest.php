@@ -41,7 +41,7 @@ class WithdrawalRequest extends BaseRequest
      */
     public function fetch($withdrawalId)
     {
-        return $this->client->get('withdrawals.' . $withdrawalId)->send();
+        return $this->client->get('withdrawals/' . $withdrawalId)->send();
     }
 
 }
