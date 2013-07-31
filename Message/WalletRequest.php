@@ -62,7 +62,7 @@ class WalletRequest extends BaseRequest
         $resolver
             ->setOptional(array(
                 'Tag', 'Name', 'Description',
-                'RaisongGoalAmount', 'ExpirationDate',
+                'RaisingGoalAmount', 'ExpirationDate',
             ))
         ;
 
