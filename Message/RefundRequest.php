@@ -21,15 +21,17 @@ class RefundRequest extends BaseRequest
     {
         $resolver = new OptionsResolver();
         $resolver
-            ->setOptional(array(
+            ->setRequired(array(
                 'ContributionID', 'UserID',
+            ))
+            ->setOptional(array(
                 'Tag',
             ))
         ;
 
         $parameters = $resolver->resolve($parameters);
 
-        return $this->client->post('refunds', null, $parameters)->send();
+        return $this->client->post('refunds', null, json_encode($parameters))->send();
     }
 
     /**
