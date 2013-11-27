@@ -31,7 +31,7 @@ class RefundRequest extends BaseRequest
 
         $parameters = $resolver->resolve($parameters);
 
-        return $this->client->post('refunds', null, $parameters)->send();
+        return $this->client->post('refunds', null, json_encode($parameters))->send();
     }
 
     /**

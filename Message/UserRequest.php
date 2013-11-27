@@ -27,11 +27,9 @@ class UserRequest extends BaseRequest
     {
         $resolver = new OptionsResolver();
         $resolver
-            ->setRequired(array(
-                'Email', 'FirstName', 'LastName',
-                'IP', 'Birthday', 'Nationality', 'PersonType',
-            ))
             ->setOptional(array(
+                'Email', 'FirstName', 'LastName', 'IP',
+                'Birthday', 'Nationality', 'PersonType',
                 'Tag', 'CanRegisterMeanOfPayment',
             ))
             ->setAllowedValues(array(

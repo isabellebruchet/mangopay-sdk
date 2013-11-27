@@ -2,8 +2,6 @@
 
 namespace Betacie\MangoPay\Message;
 
-use Symfony\Component\OptionsResolver\OptionsResolver;
-
 /**
  * A contribution is a request to process a payment (CB/VISA/MASTERCARD, ELV, SOFORTÜBERWEISUNG, GIROPAY and AMEX)
  * to a wallet or to a personal account for a dedicated user.
@@ -20,25 +18,6 @@ class ContributionRequest extends BaseRequest
      */
     public function create(array $parameters)
     {
-        $resolver = new OptionsResolver();
-        $resolver
-            ->setRequired(array(
-                'UserID', 'WalletID',
-                'Amount',
-                'ReturnURL',
-            ))
-            ->setOptional(array(
-                'Tag', 'ClientFeeAmount', 'TemplateURL',
-                'RegisterMeanOfPayment', 'PaymentCardID',
-                'Culture', 'PaymentMethodType', 'Type',
-            ))
-            ->setAllowedTypes(array(
-                'Amount' => 'integer',
-            ))
-        ;
-
-        $parameters = $resolver->resolve($parameters);
-
         return $this->client->post('contributions', null, json_encode($parameters))->send();
     }
 

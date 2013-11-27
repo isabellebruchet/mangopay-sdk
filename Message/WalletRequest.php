@@ -26,7 +26,7 @@ class WalletRequest extends BaseRequest
             ))
             ->setOptional(array(
                 'Tag', 'Name', 'Description',
-                'RaisongGoalAmount', 'ContributionLimitDate',
+                'RaisingGoalAmount', 'ContributionLimitDate',
             ))
             ->setAllowedTypes(array(
                 'Owners' => 'array',
@@ -62,7 +62,7 @@ class WalletRequest extends BaseRequest
         $resolver
             ->setOptional(array(
                 'Tag', 'Name', 'Description',
-                'RaisongGoalAmount', 'ExpirationDate',
+                'RaisingGoalAmount', 'ExpirationDate',
             ))
         ;
 

@@ -22,11 +22,9 @@ class BeneficiaryRequest extends BaseRequest
     {
         $resolver = new OptionsResolver();
         $resolver
-            ->setRequired(array(
+            ->setOptional(array(
                 'BankAccountOwnerName', 'BankAccountOwnerAddress',
                 'BankAccountIBAN', 'BankAccountBIC',
-            ))
-            ->setOptional(array(
                 'Tag', 'UserID',
             ))
         ;
@@ -101,8 +99,8 @@ class BeneficiaryRequest extends BaseRequest
         $parameters = $resolver->resolve($parameters);
 
         return $this->client
-            ->put('beneficiaries/' . $beneficiaryId . '/strongAuthentication', null, json_encode($parameters))
-            ->send();
+                ->put('beneficiaries/' . $beneficiaryId . '/strongAuthentication', null, json_encode($parameters))
+                ->send();
     }
 
 }

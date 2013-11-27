@@ -27,10 +27,6 @@ class ImmediateContributionRequest extends BaseRequest
             ->setOptional(array(
                 'Tag', 'ClientFeeAmount',
             ))
-            ->setAllowedTypes(array(
-                'Amount' => 'integer',
-                'ClientFeeAmount' => 'integer',
-            ))
         ;
 
         $parameters = $resolver->resolve($parameters);
