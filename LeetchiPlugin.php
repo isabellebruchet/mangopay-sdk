@@ -35,6 +35,10 @@ class LeetchiPlugin implements EventSubscriberInterface
     {
         $request = $event['request'];
 
+        // Add ts parameter
+        $queryString = $request->getQuery();
+        $queryString->add('ts', time());
+        
         // Add X-Leetchi-Signature to header, required for authentication
         $data = array($request->getMethod(), $request->getPath() . '?' . $request->getQuery());
 
