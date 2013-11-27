@@ -2,17 +2,17 @@
 
 namespace Betacie\MangoPay\Message;
 
-use Betacie\MangoPay\MangoPayClient;
+use Guzzle\Http\Client;
 
 class BaseRequest
 {
 
     /**
-     * @var MangoPayClient
+     * @var Client
      */
     protected $client;
 
-    public function __construct(MangoPayClient $client)
+    public function __construct(Client $client)
     {
         $this->client = $client;
     }
