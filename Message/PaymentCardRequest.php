@@ -23,6 +23,7 @@ class PaymentCardRequest extends BaseRequest
             ->setOptional(array(
                 'Tag', 'TemplateURL',
                 'OwnerID', 'ReturnURL',
+                'culture',
             ))
         ;
 
