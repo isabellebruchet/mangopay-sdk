@@ -22,7 +22,7 @@ class PaymentCardRequest extends BaseRequest
         $resolver
             ->setOptional(array(
                 'Tag', 'TemplateURL',
-                'OwnerID', 'ReturnURL',
+                'OwnerID', 'ReturnURL', 'Culture'
             ))
         ;
 
